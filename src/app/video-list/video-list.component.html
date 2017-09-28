@@ -1,0 +1,8 @@
+<h1>{{ title }}</h1>
+
+<div *ngFor="let video of videos">
+  <div>
+    <iframe width="854" height="480" [src]="getEmbedUrl(video) | safe" frameborder=" 0 " allowfullscreen *ngIf="video.embed"></iframe>
+    <h4>{{ video.name }} - {{ video.artist }}</h4>
+  </div>
+</div>
