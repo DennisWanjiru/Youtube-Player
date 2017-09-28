@@ -11,21 +11,67 @@ export class VideoListComponent implements OnInit {
     {
       name: "What About Us",
       artist: "P!nk",
-      slug: "video-1",
       embed: `ClU3fctbGls`
     },
 
     {
       name: "Dust till Dawn",
       artist: "Zyne ft Sia",
-      slug: "video-2",
+      embed: `tt2k8PGm-TI`
+    },
+
+    // {
+    //   name: "video 3",
+    //   slug: "video-3",
+    //   embed: null
+    // },
+
+    {
+      name: "Heavy",
+      artist: "Linkin Park ft Kiira",
       embed: `tt2k8PGm-TI`
     },
 
     {
-      name: "video 3",
-      slug: "video-3",
-      embed: null
+      name: "It Ain't Me",
+      artist: "Selena Gome ft Kygo",
+      embed: `tt2k8PGm-TI`
+    },
+
+    {
+      name: "Mi Gente",
+      artist: "B ft Willy William",
+      embed: `tt2k8PGm-TI`
+    },
+
+    {
+      name: "Came Here for Love",
+      artist: "Sigala",
+      embed: `tt2k8PGm-TI`
+    },
+
+    {
+      name: "Heavy",
+      artist: "Linkin Park ft Kiira",
+      embed: `tt2k8PGm-TI`
+    },
+
+    {
+      name: "It Ain't Me",
+      artist: "Selena Gome ft Kygo",
+      embed: `tt2k8PGm-TI`
+    },
+
+    {
+      name: "Mi Gente",
+      artist: "B ft Willy William",
+      embed: `tt2k8PGm-TI`
+    },
+
+    {
+      name: "Came Here for Love",
+      artist: "Sigala",
+      embed: `tt2k8PGm-TI`
     },
   ]
 

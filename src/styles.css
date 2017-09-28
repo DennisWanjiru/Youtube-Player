@@ -1,9 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
 slide {
-  min-height: 500px;
-  max-height: 500px;
+  min-height: 550px;
+  max-height: 550px;
   margin: auto;
   min-width: 100%;
   max-width: 100%;
+}
+
+.video-wrapper {
+  margin: 20px auto;
+}
+
+.video {
+  height: 200px;
+  width: 350px;
+}
+
+.image {
+  background-position: center;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  min-width: 100%;
+}
+
+.content {
+  margin-top: 70px!important;
+}
+
+.latest-wrapper {
+  margin: 20px auto;
+}
+
+.latest {
+  height: 200px;
+  width: 350px;
+  margin: 20px auto;
 }

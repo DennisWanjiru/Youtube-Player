@@ -9,12 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 export class VideoDetailComponent implements OnInit {
 
   private routeSub: any;
-  slug: string;
+  embed: string;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
-      this.slug = params['slug']
+      this.embed = params['embed']
+      // console.log(params)
     })
   }
 
