@@ -1,8 +1,15 @@
-<h1>{{ title }}</h1>
-
-<div *ngFor="let video of videos">
-  <div>
-    <iframe width="854" height="480" [src]="getEmbedUrl(video) | safe" frameborder=" 0 " allowfullscreen *ngIf="video.embed"></iframe>
+<div class="row">
+  <div class="col-md-12">
+    <h2>{{ title }}</h2>
+  </div>
+</div>
+<div class="row">
+  <div *ngFor="let video of videos">
+    <div>
+      <iframe width="854" height="480" [src]="getEmbedUrl(video) | safe" frameborder=" 0 " allowfullscreen *ngIf="video.embed"
+        class="embed-responsive-item"></iframe>
+    </div>
     <h4>{{ video.name }} - {{ video.artist }}</h4>
+    <hr>
   </div>
 </div>
