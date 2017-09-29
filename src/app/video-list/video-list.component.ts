@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'video-list',
@@ -7,81 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoListComponent implements OnInit {
   title = "Videos List"
-  videos = [
-    {
-      name: "What About Us",
-      artist: "P!nk",
-      embed: `ClU3fctbGls`
-    },
+  private req: any;
+  videos: any[];
 
-    {
-      name: "Dust till Dawn",
-      artist: "Zyne ft Sia",
-      embed: `tt2k8PGm-TI`
-    },
-
-    // {
-    //   name: "video 3",
-    //   slug: "video-3",
-    //   embed: null
-    // },
-
-    {
-      name: "Heavy",
-      artist: "Linkin Park ft Kiira",
-      embed: `tt2k8PGm-TI`
-    },
-
-    {
-      name: "It Ain't Me",
-      artist: "Selena Gome ft Kygo",
-      embed: `tt2k8PGm-TI`
-    },
-
-    {
-      name: "Mi Gente",
-      artist: "B ft Willy William",
-      embed: `tt2k8PGm-TI`
-    },
-
-    {
-      name: "Came Here for Love",
-      artist: "Sigala",
-      embed: `tt2k8PGm-TI`
-    },
-
-    {
-      name: "Heavy",
-      artist: "Linkin Park ft Kiira",
-      embed: `tt2k8PGm-TI`
-    },
-
-    {
-      name: "It Ain't Me",
-      artist: "Selena Gome ft Kygo",
-      embed: `tt2k8PGm-TI`
-    },
-
-    {
-      name: "Mi Gente",
-      artist: "B ft Willy William",
-      embed: `tt2k8PGm-TI`
-    },
-
-    {
-      name: "Came Here for Love",
-      artist: "Sigala",
-      embed: `tt2k8PGm-TI`
-    },
-  ]
-
-  constructor() { }
+  constructor(private htttp: Http) { }
 
   ngOnInit() {
+    this.req = this.htttp.get("assets/json/videos.json").subscribe(data => {
+      this.videos = data.json() as any[]
+    })
+  }
+
+  ngOnDestroy() {
+    this.req.unsubscribe()
   }
 
   getEmbedUrl(video) {
     return 'https://www.youtube.com/embed/' + video.embed
   }
-
 }
